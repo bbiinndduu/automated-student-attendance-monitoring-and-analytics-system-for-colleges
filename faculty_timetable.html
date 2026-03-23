@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Faculty Timetable</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
+}
+
+.container {
+    width: 95%;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+h2 {
+    text-align: center;
+    color: #1e3c72;
+    margin-bottom: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+th {
+    background: #1e3c72;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+.free {
+    color: gray;
+    font-style: italic;
+}
+
+button {
+    margin-top: 25px;
+    padding: 8px 14px;
+    background: #1e3c72;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #162b52;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Weekly Faculty Timetable</h2>
+
+    <table>
+        <tr>
+            <th>Day / Hour</th>
+            {% for hour in hours %}
+                <th>{{ hour }}</th>
+            {% endfor %}
+        </tr>
+
+        {% for day, sessions in timetable.items() %}
+        <tr>
+            <th>{{ day }}</th>
+            {% for session in sessions %}
+                {% if session == "Free" %}
+                    <td class="free">Free</td>
+                {% else %}
+                    <td>{{ session }}</td>
+                {% endif %}
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div style="text-align:center;">
+        <a href="/faculty_dashboard">
+            <button>Back to Dashboard</button>
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

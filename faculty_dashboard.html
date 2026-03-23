@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Faculty Dashboard</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right,#1e3c72,#2a5298);
+    color: white;
+    text-align: center;
+}
+
+.container {
+    margin-top: 120px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+.buttons {
+    margin-top: 50px;
+}
+
+button {
+    padding: 12px 22px;
+    margin: 10px;
+    border: none;
+    border-radius: 6px;
+    background: white;
+    color: #1e3c72;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #dbe3f5;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Welcome, {{ faculty_name }}</h1>
+    <h2>Subject: {{ subject_name }}</h2>
+
+    <div class="buttons">
+        <a href="/faculty_timetable"><button>Timetable</button></a>
+        <a href="/faculty_attendance"><button>Attendance Management</button></a>
+        <a href="/faculty_subject_content"><button>Subject Content</button></a>
+        <a href="/logout"><button>Logout</button></a>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Timetable</title>
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th {
+    background: #2a5298;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background: #f1f1f1;
+}
+
+.lunch {
+    background: #ffe0b2;
+    font-weight: bold;
+}
+
+.back-btn {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 15px;
+    background: #2a5298;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>📅 Weekly Timetable</h2>
+
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>Hour 1</th>
+            <th>Hour 2</th>
+            <th>Hour 3</th>
+            <th>Hour 4</th>
+            <th>Hour 5</th>
+            <th>Hour 6</th>
+        </tr>
+
+        <tr>
+            <td><b>Monday</b></td>
+            <td>Cloud Security</td>
+            <td>DSA</td>
+            <td>Generative AI</td>
+            <td class="lunch">Lunch</td>
+            <td>Networking</td>
+            <td>Lab</td>
+        </tr>
+
+        <tr>
+            <td><b>Tuesday</b></td>
+            <td>Generative AI</td>
+            <td>Cloud Security</td>
+            <td>DSA</td>
+            <td class="lunch">Lunch</td>
+            <td>Networking</td>
+            <td>Seminar</td>
+        </tr>
+
+        <tr>
+            <td><b>Wednesday</b></td>
+            <td>DSA</td>
+            <td>Generative AI</td>
+            <td>Cloud Security</td>
+            <td class="lunch">Lunch</td>
+            <td>Project</td>
+            <td>Lab</td>
+        </tr>
+
+        <tr>
+            <td><b>Thursday</b></td>
+            <td>Cloud Security</td>
+            <td>Networking</td>
+            <td>DSA</td>
+            <td class="lunch">Lunch</td>
+            <td>Generative AI</td>
+            <td>Workshop</td>
+        </tr>
+
+        <tr>
+            <td><b>Friday</b></td>
+            <td>Generative AI</td>
+            <td>Cloud Security</td>
+            <td>Networking</td>
+            <td class="lunch">Lunch</td>
+            <td>DSA</td>
+            <td>Lab</td>
+        </tr>
+
+        <tr>
+            <td><b>Saturday</b></td>
+            <td colspan="6">No Classes</td>
+        </tr>
+    </table>
+
+    <a href="/dashboard" class="back-btn">⬅ Back to Dashboard</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cloud Security - Subject Content</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+}
+
+.header {
+    background: #0b1e3d;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.container {
+    width: 60%;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 12px 0;
+    font-size: 15px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 18px;
+    background: #1e3c72;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #162b52;
+}
+
+.success {
+    color: green;
+    margin-top: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    Cloud Security - Course Content
+</div>
+
+<div class="container">
+    <form onsubmit="showMessage(); return false;">
+        <ul>
+            {% for concept in concepts %}
+            <li>
+                <input type="checkbox"> {{concept}}
+            </li>
+            {% endfor %}
+        </ul>
+
+        <button type="submit">Submit Progress</button>
+        <div id="msg" class="success"></div>
+    </form>
+</div>
+
+<script>
+function showMessage() {
+    document.getElementById("msg").innerHTML = "Progress Updated Successfully ✅";
+}
+</script>
+
+</body>
+</html>

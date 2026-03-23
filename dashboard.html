@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Dashboard</title>
+<style>
+body { margin:0; font-family:'Segoe UI'; background:#eef1f5; }
+
+.header {
+    background:#1e3c72;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:20px;
+}
+
+.profile-card {
+    width:85%;
+    margin:20px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+.profile-card img {
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    margin-right:20px;
+    border:3px solid #1e3c72;
+}
+
+.profile-details h3 { margin:0; color:#1e3c72; }
+.profile-details p { margin:4px 0; color:#444; }
+
+.dashboard {
+    width:85%;
+    margin:20px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+table {
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th, td {
+    padding:10px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+th {
+    background:#1e3c72;
+    color:white;
+}
+
+button {
+    padding:6px 12px;
+    background:#28a745;
+    color:white;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+button:hover { background:#1e7e34; }
+
+.actions {
+    margin-top:15px;
+    text-align:center;
+}
+
+.actions button {
+    margin:5px;
+    background:#007bff;
+}
+
+.actions button:hover { background:#0056b3; }
+</style>
+</head>
+<body>
+
+<div class="header">Presidency College — Student Dashboard</div>
+
+<div class="profile-card">
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+    <div class="profile-details">
+        <h3>Bindu</h3>
+        <p>Department: Computer Science</p>
+        <p>Year: 3rd Year | Section: A</p>
+    </div>
+</div>
+
+<div class="dashboard">
+    <h3>Today's Timetable</h3>
+    <table>
+        <tr><th>Hour</th><th>Subject</th><th>Attendance</th></tr>
+        <tr><td>1</td><td>Cloud Security</td><td><a href="/mark_attendance?subject=Cloud Security"><button>Mark</button></a></td></tr>
+        <tr><td>2</td><td>Generative AI</td><td><a href="/mark_attendance?subject=Generative AI"><button>Mark</button></a></td></tr>
+        <tr><td>3</td><td>DSA</td><td><a href="/mark_attendance?subject=DSA"><button>Mark</button></a></td></tr>
+        <tr><td>4</td><td>Networking</td><td><a href="/mark_attendance?subject=Networking"><button>Mark</button></a></td></tr>
+    </table>
+
+    <div class="actions">
+        <a href="/report"><button>Attendance Report</button></a>
+    </div>
+</div>
+
+</body>
+</html>

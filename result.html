@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Attendance Result</title>
+<style>
+body { font-family: 'Segoe UI'; background: linear-gradient(to right,#1e3c72,#2a5298); }
+.container { width:420px; margin:80px auto; background:white; padding:25px; border-radius:12px; text-align:center; }
+.info { text-align:left; margin:15px 0; }
+.info p { margin:6px 0; }
+.info span { font-weight:bold; color:#1e3c72; }
+img { width:260px; border-radius:10px; margin-top:15px; border:3px solid #1e3c72; }
+button { margin-top:20px; padding:10px 16px; background:#1e3c72; color:white; border:none; border-radius:6px; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Attendance Marked Successfully ✅</h2>
+    <div class="info">
+        <p>👤 Student Name: <span>Bindu</span></p>
+        <p>🆔 Student ID: <span>{{sid}}</span></p>
+        <p>📘 Subject: <span>{{subject}}</span></p>
+        <p>📅 Date: <span>{{date}}</span></p>
+        <p>⏰ Time: <span>{{time}}</span></p>  <!-- Added Time -->
+    </div>
+
+    <h3>📷 Captured Image</h3>
+    <img src="{{ url_for('static', filename='captured/' + image_filename) }}">
+
+    <br>
+    <a href="/dashboard"><button>Back to Dashboard</button></a>
+</div>
+</body>
+</html>
